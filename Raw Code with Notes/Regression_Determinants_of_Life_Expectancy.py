@@ -10,7 +10,7 @@ import numpy as np
 import statsmodels.api as sm
 
 # set working directory 
-os.chdir('c:\\Users\hmzmu\desktop\python practice\data')
+os.chdir('location of data file')
 
 # import data
 pd.read_csv('gapminder.tsv', sep='\t')
