@@ -26,36 +26,12 @@ df.dtypes
 country_df = df['country']
 subset = df[['country', 'continent', 'year']]
 subset.head()
-# you can also subset by using columns numbers
-# you can also use the range function to select a range of columns
 
 #subset rows, inspect row type
 df.loc[0]
 row_100 = df.loc[99]
 type(row_100)
 
-# df.shape gives [rows, columns], the bottom code selects rows
-df.shape[0]
-# find the last row by translating number of rows to index
-df.loc[df.shape[0] - 1]
-
-# the above code shows that the last row is 1703
-
-# pull the row name from the row index
-df.iloc[0]
-
-# notice the difference between loc and iloc
-df.head()
-
-# specify multiple rows, using nested brackets
-
-df.iloc[[0, 99, 99]]
-
-# subset by rows and columns using df.iloc[row, column]
-
-df.iloc[0, 1]
-
-df.iloc[[0, 99, 999], [0, 1, 2]]
 
 # preliminary analysis and exploration
 
@@ -90,10 +66,6 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 1/5, rando
 #check our model for multicollinearity 
 
 x_test.corr()
-
-
-
-
 
 # fitting simple linear regression to the training set
 
